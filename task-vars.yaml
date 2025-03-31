@@ -1,0 +1,19 @@
+- name: variables to print
+  hosts: web
+  vars: #playlevel variables
+    COURSE: "DEVOPS WITH AWS"
+    DURATION: "120HRS"
+  tasks:
+    - name: print the information
+      ansible.builtin.debug:
+        msg: "hi im learning {{COURSE}} with a duration of {{DURATION}}"
+
+    - name: print the information again
+      vars: #tasklevel variables
+        COURSE: "ansible"
+      ansible.builtin.debug:
+        msg: "hi im learning {{COURSE}} with a duration of {{DURATION}}"
+
+    - name: print the information and again
+      ansible.builtin.debug:
+        msg: "hi im learning {{COURSE}} with a duration of {{DURATION}}"
