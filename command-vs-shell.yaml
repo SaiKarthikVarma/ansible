@@ -3,4 +3,10 @@
   connection: local
   tasks:
     - name: execute the command
-      ansible.builtin.command: ls -ltr > /tmp/output.txt
+      ansible.builtin.command: ls -ltr > /tmp/output.txt #this doesnt work because we used redirecting so if we used shell i.e "ansible.builtin.shell" then it works
+
+      #shell goes into the server ......so command is secure than shell
+
+    - name: check the process
+      ansible.builtin.command: ps -ef | grep ssh
+      register: output
