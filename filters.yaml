@@ -2,8 +2,8 @@
   hosts: local
   connection: local
   vars:
-  COURSE: "ANSIBLE"
-  DURATION: "10HR"
+    COURSE: "ANSIBLE"
+    DURATION: "10HR"
   tasks:
     - name: print the default varaiable
       ansible.builtin.debug:
