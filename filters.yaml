@@ -1,6 +1,8 @@
 - name: demo on filters/functions
   hosts: local
   connection: local
+  COURSE="ANSIBLE"
+  DURATION="10HR"
   tasks:
     - name: print the default varaiable
       ansible.builtin.debug:
