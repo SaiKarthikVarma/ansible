@@ -57,4 +57,4 @@
       vars:
         myip: "444.168.1.1"
       ansible.builtin.debug:
-        msg: "{{myip | ansible.utils.ipv4}}"
+        msg: "{{myip | ansible.utils.ipv4}}" #gives false or if true prints the ip
