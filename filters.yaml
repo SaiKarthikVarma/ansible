@@ -4,4 +4,10 @@
   tasks:
     - name: print the default varaiable
       ansible.builtin.debug:
-        msg: "hello {{COURSE | default(5)}}"
+        msg: "hello {{COURSE | default(5)}}" #or 'ansible' at 5 prints hello ansible
+
+    - name: convert to upper case
+      vars:
+        greeting: "hello ramesh"
+      ansible.builtin.debug:
+        msg: "{{greeting | upper }}"
